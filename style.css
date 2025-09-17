@@ -40,8 +40,16 @@ html, body{
 
 html{
     margin: 5% auto;
+background-image: url(https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/135.png);
 
-
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/34.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/206.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/98.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/135.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/243.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/98.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/406.png*/
+/**/
     background-color: var(--cl-white);
 }
 
