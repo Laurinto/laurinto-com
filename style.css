@@ -12,6 +12,7 @@
     --cl-yellow: #ffec99;
     --cl-purple: #d0bfff;
     --cl-white: #f0f0f0;
+    --cl-pink:#BD73B5;
 }
 
 @media(prefers-color-scheme: dark){
@@ -31,7 +32,8 @@
 
 *{
     font-family: Fredoka;
-    color: var(--cl-text)
+    color: var(--cl-text);
+    text-decoration: none;
 }
 
 html, body{
@@ -42,28 +44,32 @@ html{
     margin: 5% auto;
 background-image: url(https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/135.png);
 
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/34.png*/
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/206.png*/
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/98.png*/
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/135.png*/
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/243.png*/
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/98.png*/
-/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/406.png*/
+/*DARK VER --- https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/34.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/208.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/433.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/391.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/343.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/1.png*/
+/*https://cs.gettysburg.edu/~duncjo01/assets/images/patterns/10.png*/
 /**/
+
     background-color: var(--cl-white);
 }
 
 body{
     all: unset;
+    
     svg{
         color: var(--cl-text);
         fill: var(--cl-text);
     }
+    
 }
 
 header, main, footer{
     margin: 0 5%;
     position: relative;
+    user-select: none;
 
     background-color: var(--cl-base);
 }
@@ -90,11 +96,19 @@ header{
         display: flex;
         align-items: center;
         gap: 1em;
-        
     }
+    
     .header-right{
             justify-content: flex-end;
-        }
+    }
+
+    h1:hover{
+        color: var(--cl-hover);
+    }
+    svg:hover{
+        color: var(--cl-text);
+        fill: var(--cl-text);
+    }
 }
 
 /*PARTE PRINCIPAL*/
@@ -124,10 +138,13 @@ main{
             
 
             .art-as-1{
-                height: 10em;
+                height: 12em;
+
                 border: 2px solid var(--cl-text);
                 margin: 0.75em;
-                background: var(--cl-blue);
+                background-image: url("images/peny-img-1.png");
+                background-size: cover;
+
             }
             .art-as-2{
                 height: auto;
@@ -135,6 +152,17 @@ main{
                 margin: 0.75em;
                 background: var(--cl-yellow);
                 text-align: center;
+                transition:
+                    transform 0.4s ease;
+            }
+            .art-as-2:hover{
+                transform: translateY(-0.35em);
+                cursor: pointer;
+            }
+            .art-as-2:active{
+                .art-as-1{
+                    background-image: url(images/peny-img-2.png);
+                }
             }
         }
     }
@@ -156,6 +184,7 @@ main{
         display: grid;
         grid-template-columns: 40% 60%;
         padding: 0;
+        padding-right: 0.5em; /*apaño temporal*/
         gap: 0.5em;
 
         border: 2px solid var(--cl-text);
@@ -172,7 +201,15 @@ main{
             
             width: 100%;
             height: 170px; /*en realidad es auto pero esto es en referencia de momento*/
+            transition:
+                transform 0.4s ease;
         }
+
+        .photo:hover{
+            transform: translateY(-0.35em);
+        }
+
+
         .art-2-2{
             padding: 0.5em;
             display: grid;
@@ -183,10 +220,18 @@ main{
                 grid-template-columns: repeat(2, 1fr);
                 gap:1em;
                 margin: 0 1em 0 0;
+                p{
+                    padding: 1em;
+                }
                 button{
                     all: unset;
                     border: 2px solid var(--cl-text);
                     height: 2em; /*altura relativa, puede cambiar*/
+                    transition:
+                        transform 0.4s ease;
+                }
+                button:hover{
+                    transform: translateY(-0.35em);
                 }
                 .button-1{background: var(--cl-blue);}
                 .button-2{background: var(--cl-yellow);}
@@ -205,6 +250,11 @@ main{
             border: 2px solid var(--cl-text);
             padding: 0.5em;
             height: 9em; /*medición relativa solo para ver*/
+            transition:
+                transform 0.4s ease;
+        }
+        div:hover{
+            transform: translateY(-0.35em);
         }
 
         .art-3-1{background: var(--cl-yellow);}
@@ -223,6 +273,8 @@ main{
             height: 9em;
 
             width: 100%;
+            transition:
+                transform 0.4s ease;
         }
 
         .art-4-1{
@@ -230,6 +282,9 @@ main{
             top:1em;
             left: 0;
             background: var(--cl-blue);
+        }
+        .art-4-1:hover{
+            transform: translateY(-0.35em);
         }
         .art-4-2{
             position: relative;
@@ -239,12 +294,16 @@ main{
             background: var(--cl-white);
         }
 
+        .art-4-2:hover{
+            transform: translateY(-0.35em);
+        }
+
     }
 
-    .advert{
-        border: 2px dashed #ff2525;
-        background: #eccdcd;
-        h2, p{color: #ff2525;}
+    .advert{ /*ESTÁ HASTA QUE SE TERMINE LA WEB*/
+        border: 2px dashed var(--cl-pink);
+        background: #c8ddda;
+        h2, p{color: var(--cl-pink);}
         text-align: center;
         margin: 3em 2em;
     }
