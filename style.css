@@ -172,6 +172,11 @@ main{
         margin: 1em 2em;
     }
 
+    .music-player{
+        background: var(--cl-blue);
+        height: 3em;
+    }
+
     .art-1{ /*sección 1 --> título*/
         border: 2px solid var(--cl-text);
         text-align: center;
@@ -191,6 +196,9 @@ main{
         background: var(--art-2-background);
 
         .photo{
+            display: flex;
+            justify-content: center;
+
             position: relative;
             top: 1em;
             right: 1.25em;
@@ -200,9 +208,16 @@ main{
             box-shadow: 0.5em 0.5em 0 0 var(--cl-text);
             
             width: 100%;
-            height: 170px; /*en realidad es auto pero esto es en referencia de momento*/
+            height: 12em;
             transition:
                 transform 0.4s ease;
+
+            img{
+                
+                height: 100%;
+                object-fit: cover;
+
+            }
         }
 
         .photo:hover{
@@ -221,12 +236,13 @@ main{
                 gap:1em;
                 margin: 0 1em 0 0;
                 p{
-                    padding: 1em;
+                    padding: 0 1em;
+                    text-align: center;
                 }
                 button{
                     all: unset;
                     border: 2px solid var(--cl-text);
-                    height: 2em; /*altura relativa, puede cambiar*/
+                    height: auto; /*altura relativa, puede cambiar*/
                     transition:
                         transform 0.4s ease;
                 }
@@ -300,13 +316,22 @@ main{
 
     }
 
+    .characters-scrolling{
+        border: 2px solid var(--cl-text);
+        background: var(--cl-purple);
+        height: 2em;
+        margin: 3em 3em;
+    }
+
     .advert{ /*ESTÁ HASTA QUE SE TERMINE LA WEB*/
         border: 2px dashed var(--cl-pink);
         background: #c8ddda;
         h2, p{color: var(--cl-pink);}
         text-align: center;
-        margin: 3em 2em;
+        margin: 0 2em 1em;
     }
+
+    
 }
 
 /*FOOTER*/
